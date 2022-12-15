@@ -7,19 +7,26 @@
 
 int main(void)
 {
-	int counter;
-	int countto = 50;
+	int i = 0;
 	long a = 1;
-	long b = 2;
+	long b = 0;
+	long fibo = 0;
 
-	for (counter = 1; counter <= (countto / 2); counter++)
+	for (i = 1; i <= 50; i++)
 	{
-		printf("%li, %li, ", a, b);
-		a += b;
-		b += a;
+		fibo = a + b;
+		b = a;
+		a = fibo;
+		if(i<50)
+		{
+			print("%ld, ", fibo);
+		}
+		else
+		{
+			print("%ld", fibo);
+		}
+
 	}
-	if (countto % 2 == 1)
-		printf("%li", a);
 
 	printf("\n");
 

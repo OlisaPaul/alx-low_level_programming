@@ -17,7 +17,7 @@ int main(void)
 		fibo = a + b;
 		b = a;
 		a = fibo;
-		if(i<50)
+		if (i < 50)
 		{
 			printf("%ld, ", fibo);
 		}

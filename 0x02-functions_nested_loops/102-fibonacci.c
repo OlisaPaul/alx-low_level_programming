@@ -19,11 +19,11 @@ int main(void)
 		a = fibo;
 		if(i<50)
 		{
-			print("%ld, ", fibo);
+			printf("%ld, ", fibo);
 		}
 		else
 		{
-			print("%ld", fibo);
+			printf("%ld", fibo);
 		}
 
 	}

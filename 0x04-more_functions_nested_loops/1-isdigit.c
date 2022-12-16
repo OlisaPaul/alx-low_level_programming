@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _isupper - define if a character is a number
+ * _isdigit - input
  *
- * Description: Prints the alphabet with _putchar
+ * Description: define if a character is a number
  * @c: charater
- * Return: void
+ * Return: 1 yes 0 no
  */
 
 int _isdigit(int c)

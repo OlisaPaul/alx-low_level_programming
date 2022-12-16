@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
  * print_line - entry point
@@ -10,17 +10,18 @@
 
 void print_line(int n)
 {
-    int i;
+	int num_lines;
 
-    if (n <= 0)
-    {
-        _putchar('\n');
-    }
-    else
-    {
-        for (i = '0'; i < n; i++)
-        {
-            _putchar(i);
-        }
-    }
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		for (num_lines = 1; num_lines <= n; num_lines++)
+		{
+			_putchar('_');
+		}
+		_putchar('\n');
+	}
 }

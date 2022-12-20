@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _puts - prints the string passed into it
+ * print_rev - prints the string in reverse
  * @str: parameter of string type
  * Return: always 0
 */

@@ -6,7 +6,7 @@
  * @str: parameter of string type
  * Return: always 0
  */
-void _puts(char *str)
+void print_rev(char *str)
 {
 	int i;
 	int len = strlen(str);

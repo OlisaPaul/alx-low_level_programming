@@ -9,29 +9,38 @@
 
 int _atoi(char *s)
 {
-int sign = 1, base = 0, i = 0;
-      
-    while (s[i] == ' ') 
-    {
-        i++;
-    }
-      
-    if (s[i] == '-' || s[i] == '+') 
-    {
-        sign = 1 - 2 * (s[i++] == '-');
-    }
-    
-    while (s[i] >= '0' && s[i] <= '9') 
-    {
-        if (base > INT_MAX / 10
-            || (base == INT_MAX / 10 
-            && s[i] - '0' > 7)) 
-        {
-            if (sign == 1)
-                return INT_MAX;
-            else
-                return INT_MIN;
-        }
-        base = 10 * base + (s[i++] - '0');
-    }
-    return base * sign;}
+	unsigned int counter, i, j, k, length, num, l;
+	int aux;
+
+	aux = 1;
+	counter = 0;
+	num = 0;
+
+	while (*(s + counter) != '\0')
+		counter++;
+	for (i = 0; i < counter; i++)
+	{
+		if (*(s + i) <= '9' && *(s + i) >= '0')
+		break;
+	}
+	for (j = i; j < counter; j++)
+	{
+		if (!(*(s + j) <= '9' && *(s + j) >= '0'))
+			break;
+	}
+
+	for (k = 0; k < i; k++)
+	{
+		if (*(s + k) == '-')
+			aux = -aux;
+	}
+	length = j - i;
+	l = i;
+		while (length >= 1)
+	{
+		num = num * 10 + (*(s + l) - '0');
+		l++;
+		length--;
+	}
+	return (num * aux);
+}

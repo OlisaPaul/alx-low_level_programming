@@ -6,7 +6,7 @@
  *
  * Return: the string printed.
  */
-int _print_rev_recursion(char *s)
+void _print_rev_recursion(char *s)
 {
 
 	if (*s == '\0')
@@ -15,5 +15,5 @@ int _print_rev_recursion(char *s)
 	}
 
 	_print_rev_recursion(s + 1);
-	putchar(s[index]);
+	_putchar(s[index]);
 }

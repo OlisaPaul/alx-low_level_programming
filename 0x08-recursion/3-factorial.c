@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * _print_rev_recursion - prints a string.
- * @s: source string
+ * factorial - returns the factorial of n
+ * @n: source integer
  *
  *
  * Return: the string printed.

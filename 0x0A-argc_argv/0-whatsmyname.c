@@ -1,15 +1,13 @@
 #include <stdio.h>
 
 /**
- *
- * main: returns the name of a program
- * @argc: integer argument
- * @argv: array of string
- *
- *return 0
+ * main - print name of program
+ * @argc: argument counter
+ * @argv: pointer to array of arguments
+ * Return: 0 on success
  */
 
-int  main (int argc, char *argv[])
+int  main(int argc, char *argv[])
 {
 	if (argc > 0)
 	{

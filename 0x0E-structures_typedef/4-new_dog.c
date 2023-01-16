@@ -8,7 +8,7 @@
  * @age: age of type float
  * @owner: owner of type string
  *
- * return: structure
+ * Return: structure
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {

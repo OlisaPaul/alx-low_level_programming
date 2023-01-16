@@ -1,5 +1,13 @@
 #include "dog.h"
 
+/**
+ * init_dog - 
+ * @d: a structure
+ * @name: a name string
+ * @age: an age integer
+ * @owner: owner of type string
+ * return: void
+ */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {

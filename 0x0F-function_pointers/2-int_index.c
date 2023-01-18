@@ -7,8 +7,9 @@
  * @size: number of elements in the array
  * @cmp: function pointer
  *
- * Return: integer
+ * Return: integer where integer's found, -1 if not found or array not present
  */
+
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;

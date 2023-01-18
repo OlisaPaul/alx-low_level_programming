@@ -1,40 +1,46 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h> /* printf */
+#include <stdlib.h> /* atoi */
 #include "3-calc.h"
-/**
- * main - operates two numbers.
- * @argc: argument counter.
- * @argv: argument vector.
- * Return: result, otherwise 98 for arg error, 99 for op, error 100 for divide
- * or multiply by 0
- */
-int main(int argc, char **argv)
-{
-	int a, b, answer;
-	int (*function)(int, int);
 
+/**
+ * main - when user runs main,
+ * user should give two integers and an operator and
+ * main will calculate the math via a function pointer.
+ * prints sum, difference, product, dividend, or remainder
+ * @argc: argument counter
+ * @argv: arguments
+ * Return: 0 on sucess
+ */
+
+int main(int argc, char *argv[])
+{
+	int n1, n2;
+	int (*f)(int, int);
+
+	/* validate input */
 	if (argc != 4)
 	{
-		puts("Error");
+		printf("Error\n");
 		exit(98);
 	}
 
-	if (argv[2][1] != '\0')
+	/* convert user input to ints and point to correct operator function */
+	n1 = atoi(argv[1]);
+	n2 = atoi(argv[3]);
+	f = get_op_func(argv[2]);
+
+	if (f == NULL || (argv[2][1] != '\0'))
 	{
-		puts("Error");
+		printf("Error\n");
 		exit(99);
 	}
-
-	function = get_op_func(*(argv + 2));
-	if (!function)
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3][0] == '0')
 	{
-		puts("Error");
-		exit(99);
+		printf("Error\n");
+		exit(100);
 	}
 
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-	answer = function(a, b);
-	printf("%d\n", answer);
+	printf("%d\n", f(n1, n2)); /* calculate via function ptr */
+
 	return (0);
 }

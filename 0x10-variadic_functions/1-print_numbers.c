@@ -4,10 +4,11 @@
 #include "variadic_functions.h"
 
 /**
- * sum_them_all - returns the sum of all its parameters.
+ * print_numbers - returns the sum of all its parameters.
  * @n: number of variables
- *
- * Return: Alway
+ * @seperator: the string to be printed between the strings
+ * 
+ * Return: Always 0.
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
